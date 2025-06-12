@@ -1,0 +1,12 @@
+# Ignore IDE-specific files and directories
+/shelf/
+/workspace.xml
+.idea/
+
+# Ignore virtual environment and compiled Python files
+.venv/
+__pycache__/
+
+# Ignore build directories
+**/build/
+**/dist/
