@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #007BFF;
+  color: white;
+}
+
+.card {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  table, form {
+    font-size: 14px;
+  }
+
+  form input, form button {
+    width: 100%;
+  }
+}
+
+.delete-bt{
+    background-color: red;
+}
+
+.underlined{
+    text-decoration: underline;
+}

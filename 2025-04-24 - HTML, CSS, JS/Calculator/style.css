@@ -1,0 +1,43 @@
+body {
+    background-color: palegreen;
+    font-family: sans-serif;
+}
+
+#divRes {
+    border: 2px solid;
+    text-align: right;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: green;
+}
+
+input {
+    width: 100px;
+}
+
+#divControls {
+    /* border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aqua; */
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}

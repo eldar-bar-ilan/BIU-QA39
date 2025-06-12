@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server</title>
+</head>
+
+<body onload="getData()">
+    <h1>Server</h1>
+    First Name: <span id="first"></span>
+    <br>
+    Email: <span id="email"></span>
+    <br>
+    Phone Number: <span id="phone"></span>
+    <br>
+    ID: <span id="id"></span>
+    <br>
+    Color: <span id="color"></span>
+    <br>
+    <hr>
+    <a href="/">Back to Home</a>
+
+    <script>
+        // this is JavaScript
+        function getData() {
+            const params = new URLSearchParams(window.location.search);
+            const data = {};
+
+            for (const [key, value] of params.entries()) {
+                // Optional: Convert keys to camelCase or remove hyphens
+                const cleanedKey = key.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+                data[cleanedKey] = decodeURIComponent(value);
+            }
+
+            document.getElementById("first").innerHTML = data.firstName;
+            document.getElementById("email").innerHTML = data.email;
+            document.getElementById("phone").innerHTML = data.phone;
+            document.getElementById("id").innerHTML = data.id;
+            document.getElementById("color").innerHTML = data.color;
+
+            return data;
+        }
+
+        console.dir(getData());
+    </script>
+</body>
+
+</html>
