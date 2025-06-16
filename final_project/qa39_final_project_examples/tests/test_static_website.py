@@ -23,6 +23,12 @@ class TestDynamicWebsite(unittest.TestCase):
         title = self.driver.title
         self.assertEqual('Automation Project', title)
 
+    def test2_h1(self):
+        h1_element = self.driver.find_element(By.TAG_NAME, 'h1')
+        self.assertEqual('Automation Project - Main Page', h1_element.text)
+
+
+
 
 
 
