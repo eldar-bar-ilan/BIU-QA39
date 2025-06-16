@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-class TestDynamicWebsite(unittest.TestCase):
+class TestStaticWebsite(unittest.TestCase):
     BASE_URL = 'http://127.0.0.1:5000/other/home'
 
     @classmethod
