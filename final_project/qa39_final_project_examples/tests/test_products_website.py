@@ -41,6 +41,11 @@ class TestProductsWebsite(unittest.TestCase):
         td_table = self.driver.find_element(By.XPATH, '//*[@id="product-table"]/tr/td[2]')
         self.assertEqual('Table', td_table.text)
 
-        
+
+        # test that product price is $500.00
+        td_table = self.driver.find_element(By.XPATH, '//*[@id="product-table"]/tr/td[3]')
+        self.assertEqual('$500.00', td_table.text)
+
+
 
 
