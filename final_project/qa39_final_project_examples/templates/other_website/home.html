@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='other_website/style.css') }}">
+    <title>Automation Project</title>
+</head>
+
+<body>
+    <section>
+
+        <header>
+            <h1>Automation Project - Main Page</h1>
+        </header>
+
+        <main>
+            <h2>Cities of the World</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>USA</th>
+                            <th>Europe</th>
+                            <th>Israel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Washington, D.C.</td>
+                            <td>London</td>
+                            <td>Jerusalem</td>
+                        </tr>
+                        <tr>
+                            <td>New York City</td>
+                            <td>Manchester</td>
+                            <td>Tel Aviv</td>
+                        </tr>
+                        <tr>
+                            <td>San Francisco</td>
+                            <td>Berlin</td>
+                            <td>Haifa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Student Details</h2>
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>Smith</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane</td>
+                            <td>Doe</td>
+                            <td>B+</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Alice</td>
+                            <td>Johnson</td>
+                            <td>A-</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Michael</td>
+                            <td>Williams</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Emily</td>
+                            <td>Brown</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Form</h2>
+            <fieldset>
+                <legend>Personal Information Form</legend>
+                <form action="/other/next">
+                    <div class="form-div">
+                        <span class="form-span">
+                            <label for="first-name">First Name</label>
+                        </span>
+                        <input id="first-name" name="first-name" type="text" placeholder="Enter First Name" size="40"
+                            required>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span">
+                            <label for="last-name">The Last Name</label>
+                        </span>
+                        <input id="last-name" name="last-name" type="text" placeholder="Enter Last Name" size="40"
+                            required>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span">
+                            <label for="city">City</label>
+                        </span>
+                        <select name="city" id="city">
+                            <option value="">--- choose city ---</option>
+                            <option value="Tel Aviv">Tel Aviv</option>
+                            <option value="Jerusalem">Jerusalem</option>
+                            <option value="Haifa">Haifa</option>
+                            <option value="Beer Sheva">Beer Sheva</option>
+                        </select>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span">
+                            <label for="email">Email</label>
+                        </span>
+                        <input id="email" name="email" type="email" placeholder="Enter email" size="40" required>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span"><label for="mobile">Mobile</label></span>
+                        <select name="area-code" id="area-code">
+                            <option value="050" selected="selected">050</option>
+                            <option value="052">052</option>
+                            <option value="053">053</option>
+                            <option value="054">054</option>
+                        </select>
+                        <input id="mobile" type="tel" name="mobile" placeholder="123-45-678" required>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span"><label for="gender">Gender</label></span>
+                        <input id="male" name="gender" required type="radio" value="male"> <label
+                            for="male">Male</label>
+                        &nbsp;|
+                        <input id="female" name="gender" type="radio" value="female"> <label for="female">Female</label>
+                        &nbsp;|
+                        <input id="other" name="gender" type="radio" value="other"> <label for="other">Other</label>
+                    </div>
+                    <div class="form-div">
+                        <span class="form-span"><label for="proffesions">Preferred Professions</label></span>
+                        <input id="math" name="professions" type="checkbox" value="math"> <label for="math">Math</label>
+                        &nbsp;|
+                        <input id="physics" name="professions" type="checkbox" value="physics"> <label
+                            for="physics">Physics</label> &nbsp;|
+                        <input id="biology" name="professions" type="checkbox" value="biology"> <label
+                            for="other">Biology</label>
+                        &nbsp;|
+                        <input id="chemistry" name="professions" type="checkbox" value="chemistry"> <label
+                            for="chemistry">Chemistry</label> &nbsp;|
+                        <input id="english" name="professions" type="checkbox" value="english"> <label
+                            for="english">English</label>
+                    </div>
+
+                    <hr>
+                    <div class="form-div">
+                        <input id="submit-form" type="submit">
+                        <input id="reset-form" type="reset">
+                    </div>
+                </form>
+            </fieldset>
+
+            <h2>A demonstration of how to access a PROGRESS element</h2>
+            <fieldset>
+                <legend>Downloading Progress</legend>
+                <button onclick="startDownload()">Start Downloading</button>
+                <progress id="download-progress" value="0" max="100"></progress>
+                <label for="download-progress">Progress: <span id="progress-txt">0</span>%</label>
+                <span id="download-finished-msg" class="msg">Download Finished! <button
+                        onclick="confirmMessage(this)">OK</button></span>
+            </fieldset>
+
+            <h2>Text Demo</h2>
+            <fieldset>
+                <p id="text-p"></p>
+            </fieldset>
+            <br>
+            <button onclick="insertText()">Insert Text</button>
+            <button onclick="clearText()">Clear</button>
+            
+            <img id="logo" src="{{ url_for('static', filename='other_website/images/selenium_junit.png') }}" alt="">
+            <!-- links ---------------------------------------------------------------------- -->
+            <div class="links">
+                <h2>Links</h2>
+                <ul>
+                    <li>
+                        <a href="/other/next">Next Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.google.com">Google</a>
+                    </li>
+                    <li>
+                        <a href="https://www.merriam-webster.com/">Merriam-Webster Dictionary</a>
+                    </li>
+                    <li>
+                        <a href="https://www.jerusalem.muni.il/">Jerusalem Municipality</a>
+                    </li>
+                    <li>
+                        <a href="/">Back to Products App</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            All Rights Reserved &copy;
+        </footer>
+
+    </section>
+
+    <script>
+        // ----------------------------------------------------------------------------------------
+        function startDownload() {
+            // Simulate download progress
+            var progress = document.getElementById("download-progress");
+            var progressTxt = document.getElementById("progress-txt");
+            var intervalId = setInterval(function () {
+                if (progress.value === 100) {
+                    clearInterval(intervalId);
+                    document.getElementById("download-finished-msg").style.display = "inline";
+                    return;
+                }
+                progress.value += 1;
+                progressTxt.innerText = progress.value;
+            }, 20);
+        }
+
+        function confirmMessage(bt) {
+            bt.parentElement.style.display = "none";
+            var progress = document.getElementById("download-progress");
+            progress.value = 0;
+            var progressTxt = document.getElementById("progress-txt");
+            progressTxt.innerText = "0";
+        }
+
+        function insertText() {
+            let txt = prompt("Insert Text", "your text...");
+            document.getElementById("text-p").innerText = txt;
+        }
+        function clearText() {
+            document.getElementById("text-p").innerText = null;
+        }
+    </script>
+
+</body>
+
+</html>

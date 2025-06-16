@@ -1,0 +1,118 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+    height: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 10% 85% 5%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    /* Enable flexbox for the header */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    padding: 10px;
+    grid-row: span 1;
+    background-color: chocolate;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 10px;
+    grid-row: span 1;
+    overflow-y: scroll;
+}
+
+footer {
+    padding: 10px;
+    grid-row: span 1;
+    text-align: center;
+    background-color: chocolate;
+}
+
+.table-container {
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    /* This ensures that the table doesn't overflow beyond the rounded corners */
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+th {
+    text-align: left;
+    background-color: burlywood;
+}
+div.form-div {
+    margin-top: 5px;
+}
+
+span.form-span {
+    display: inline-block;
+    width: 20%;
+}
+
+fieldset {
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+span.msg {
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 3px;
+    display: none;
+    padding: 7px;
+}
+
+progress {
+    width: 25%;
+}
+
+div.links{
+    position: fixed;
+    top: 40%;
+    right: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 15%;
+}
+
+img#logo{
+    position: fixed;
+    top: 17%;
+    right: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 15%;
+}

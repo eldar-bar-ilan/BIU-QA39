@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='other_website/style.css') }}">
+	<title id="newTitle">Next Page</title>
+</head>
+
+<body>
+	<section>
+		<header>
+			<h1>Automation Project - Next Page</h1>
+		</header>
+		<main>
+
+			<button onClick="changeTitle();">Change Title</button>
+			<br>
+			<br>
+			<a href="/other/home">Back to Home Page</a>
+		</main>
+		<footer>
+			All Rights Reserved &copy;
+		</footer>
+	</section>
+	<script>
+		function changeTitle() {
+			document.getElementById("newTitle").innerHTML = "Finish";
+		}
+	</script>
+</body>
+
+</html>
