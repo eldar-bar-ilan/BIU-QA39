@@ -49,3 +49,13 @@ class TestProductsWebsite(unittest.TestCase):
 
 
 
+    def test2_display_product(self):
+        time.sleep(1)
+        bt_display = self.driver.find_element(By.XPATH, '//*[@id="product-table"]/tr/td[5]/button[1]')
+        bt_display.click()
+
+        display_div = self.driver.find_element(By.ID, 'product-details')
+        product_name = display_div.find_element(By.TAG_NAME, 'h3').text
+        product_price = display_div.find_element(By.TAG_NAME, 'p').text
+        self.assertEqual('Table', product_name, 'Wrong product name')
+        self.assertEqual('Price: $500', product_price, 'Wrong product price')
