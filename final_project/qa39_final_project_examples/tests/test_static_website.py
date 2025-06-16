@@ -28,8 +28,16 @@ class TestDynamicWebsite(unittest.TestCase):
         self.assertEqual('Automation Project - Main Page', h1_element.text)
 
 
+    def test3_only_one_h1(self):
+        list_h1 = self.driver.find_elements(By.TAG_NAME, 'h1')
+        number_of_h1 = len(list_h1)
+        self.assertEqual(1, number_of_h1)
 
 
 
+    def test4_number_of_tables(self):
+        list_tables = self.driver.find_elements(By.TAG_NAME, 'table')
+        number_of_tables = len(list_tables)
+        self.assertEqual(2, number_of_tables, 'Wrong number of tables')
 
 
